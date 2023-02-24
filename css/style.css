@@ -1,0 +1,26 @@
+.timer{
+    border:2px solid red;
+    border-radius:50%;
+    height:200px;
+    width:200px;
+    text-align:center;
+  display:flex;
+    align-items:center;
+    justify-content:center;
+   
+  }
+  
+  .show-time{
+    /* display:flex;
+    align-items:center;
+    justify-content-center; */
+  }
+  
+  .main-cont {
+    text-align:center;
+     display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+  }
+  
