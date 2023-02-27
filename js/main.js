@@ -8,19 +8,24 @@ let counter1 = 0;
 let counter2 = 0;
 let counter3 = 0;
 let clicked = 0;
+let counter=0;
 
-startBtn.onclick = () => {
+startBtn.addEventListener("click",() => {
   if (!startBtn.classList.contains("pause")) {
     startBtn.classList.add("pause");
     startBtn.innerHTML = "Pause";
 
-    timer = setInterval(function () {
-      e1 = print(counter1);
+    timer = setInterval(function watch() {
+        e = print(counter);
+        e1 = print(counter1);
       e2 = print(counter2);
       e3 = print(counter3);
-      showTime.innerHTML = `${e3}:${e2}:${e1}`;
-
-      counter1 += 1;
+      showTime.innerHTML = `${e3}:${e2}:${e1}:${e}`;
+      if (counter == 100) {
+        counter1 += 1;
+        counter = 0;
+      }
+     counter+=1
       if (counter1 == 60) {
         counter2 += 1;
         counter1 = 0;
@@ -29,7 +34,7 @@ startBtn.onclick = () => {
         counter3 += 1;
         counter2 = 0;
       }
-    }, 1000);
+    }, 10);
     console.log(timer);
   } else {
     clearInterval(timer);
@@ -41,11 +46,12 @@ startBtn.onclick = () => {
     showTime.innerHTML = `00:00:00`;
     startBtn.classList.remove("pause");
     startBtn.innerHTML = "start";
+    counter = 0;
     counter1 = 0;
     counter2 = 0;
     counter3 = 0;
   };
-};
+});
 /* pauseBtn.onclick =()=>{
 console.log("1");
 } */

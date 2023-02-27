@@ -6,6 +6,10 @@ body {
   background-image: url("../assets/images/clock-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  animation-name: clock-bg;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  transition: all 1s;
 }
 
 .timer {
